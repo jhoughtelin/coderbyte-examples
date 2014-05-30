@@ -6,7 +6,7 @@ function LongestWord($sen) {
     $words = explode(" ",$sen);
 
     foreach($words as $word){
-        $cword = preg_replace('/[^a-z]/i', '', $word);
+        $cword = preg_replace('/[^\da-z]/i', '', $word);
         if(strlen($cword)>$len){
             $longest = $cword;
             $len = strlen($cword);
