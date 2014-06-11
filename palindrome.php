@@ -1,28 +1,18 @@
 <?php
-/* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
-/**
- * palindrome.php
- *
- * PHP version 5.5.x
- *
- * @category  coderbyte-examples
- * @package   coderbyte-examples
- * @author    Josh Houghtelin <Josh@FindSomeHelp.com>
- * @since     2014/06/11
- * @link      http://gitphp.com
- */
+function Palindrome($string) {
 
-
-function palindrome($string) {
     $string  = strtolower(preg_replace('/[^a-z]/i', '', $string));
 
     if($string == strrev($string)){
-        return true;
+        return "true";
     }else {
-        return false;
+        return "false";
     }
+
 }
 
+// keep this function call here  
+// to see how to enter arguments in PHP scroll down
+echo Palindrome(fgets(fopen('php://stdin', 'r')));
 
-echo palindrome('1Racecar ! ');
